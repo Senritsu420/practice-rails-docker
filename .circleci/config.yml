@@ -35,7 +35,7 @@ jobs:
           command: gem install bundler
       - run:
           name: bundle install
-          command: bundle install
+          command: bundle config
       - run:
           name: Database setup
           command: bundle exec rails db:migrate
