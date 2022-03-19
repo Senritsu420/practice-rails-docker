@@ -31,11 +31,11 @@ jobs:
           path: ~/rails-docker-kubo
       - ruby/install-deps
       - run:
-          name: bundle setup
-          command: gem install bundler
+          name: bundle check
+          command: bundle config
       - run:
           name: bundle install
-          command: bundle config
+          command: bundle install --path vendor/bundle
       - run:
           name: Database setup
           command: bundle exec rails db:migrate
